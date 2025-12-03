@@ -11,3 +11,7 @@ Environmental variables -> path -> New -> path to the MinGW\bin where the compil
 - Ctrl + Shift + B - build the main.exe every time before we run the app
 - Run the app from the terminal: In the dir where is main.exe type .\main.exe
 2. Basics
+printf(string)
+scanf()
+fgets(var, length, stdin)
+getchar()

@@ -1,18 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* User input */
+// User input 
 int main()
 {
-    https://www.google.com
+    
     int age;
-    char name[] = "Ivan";
+    char name[20];
     printf("What is your age?\n");
     scanf("%d", &age);
-    printf("Your age is %d\n.", age);
+    // clear the leftover newline
+    getchar();
+    printf("Your age is %d.\n", age);
     printf("What is your name?\n");
-    scanf("%s", &name);
+    // For strings without space we can use this: scanf("%s", name); 
+    fgets(name, 20, stdin);
     printf("Your name is %s", name);
-
     return 0;
     
 
