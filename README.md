@@ -9,4 +9,5 @@ Environmental variables -> path -> New -> path to the MinGW\bin where the compil
 - Create a file tasks.json  
 - Create main.c
 - Ctrl + Shift + B - build the main.exe every time before we run the app
+- Run the app from the terminal: In the dir where is main.exe type .\main.exe
 2. Basics
