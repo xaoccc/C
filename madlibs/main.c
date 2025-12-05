@@ -5,8 +5,8 @@ int main()
 {
     char color[10];
     char pluralNoun[20];
-    char celebrityF[20];
-    char celebrityL[20];
+    char celebrityF[20] = "";
+    char celebrityL[20] = "";
     printf("Enter a color:");
     scanf("%s", color);
     printf("Enter a plural noun:");
