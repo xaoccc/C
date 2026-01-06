@@ -1,41 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <windows.h>   
+#include <windows.h>
 
-char nums[] = {1, 2, 3, 14, 33};
-char operations[] = "+-/*";
-
-void calculate(double num1, char operator[4], double num2) {
-    if (strcmp(operator, "-") == 0) {
-        printf("\nResult: %f", num1 - num2);
+// The calculator takes 3 arguments: number, operator and anoter number
+double calculate(double num1, char operator, double num2)
+{
+    if (operator == '-')
+    {
+        return num1 - num2;
     }
-    else if (strcmp(operator, "+") == 0) {
-        printf("\nResult: %f", num1 + num2);
+    if (operator == '+')
+    {
+        return num1 + num2;
     }
-    else if (strcmp(operator, "/") == 0) {
-        printf("\nResult: %f", num1 / num2);
+    if (operator == '/')
+    {
+        return num1 / num2;
     }
-    else if (strcmp(operator, "*") == 0) {
-        printf("\nResult: %f", num1 * num2);
+    if (operator == '*')
+    {
+        return num1 * num2;
     }
-    
 }
 
 int main()
 {
     double num1;
     double num2;
-    char operator[4];
-    printf("enter a number: ");
+    // The operator is just one character long
+    char operator = 'a';
+
+    printf("Enter a number: ");
     scanf("%lf", &num1);
-    printf("enter operation: ");
-    scanf("%s", operator);
-    printf("enter another number: ");
-    scanf("%lf", &num2);
-   
-    calculate(num1, operator, num2);
-    Sleep(3000);
+    while (operator != 'x')
+    {
+        printf("\nEnter operation (+, -, * or /): ");
+        scanf(" %c", &operator);
+        printf("Enter a number: ");
+        scanf("%lf", &num2);
+        printf("\nResult: %f", calculate(num1, operator, num2));
+        num1 = calculate(num1, operator, num2);
+    }
     return 0;
-}
+};
 
