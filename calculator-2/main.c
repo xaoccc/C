@@ -6,21 +6,17 @@
 // The calculator takes 3 arguments: number, operator and anoter number
 double calculate(double num1, char operator, double num2)
 {
-    if (operator == '-')
-    {
-        return num1 - num2;
-    }
-    if (operator == '+')
-    {
-        return num1 + num2;
-    }
-    if (operator == '/')
-    {
-        return num1 / num2;
-    }
-    if (operator == '*')
-    {
-        return num1 * num2;
+    switch (operator) {
+        case '-':
+            return num1 - num2;
+        case '+':
+            return num1 + num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            return num1 / num2;
+        default:
+            break;
     }
 }
 
